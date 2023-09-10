@@ -3,8 +3,6 @@ dotenv.config();
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "hardhat-deploy";
-import "@matterlabs/hardhat-zksync-solc";
-import "@matterlabs/hardhat-zksync-verify";
 
 // If not set, it uses ours Alchemy's default API key.
 // You can get your own at https://dashboard.alchemyapi.io
@@ -21,12 +19,13 @@ const config: HardhatUserConfig = {
     settings: {
       optimizer: {
         enabled: true,
-        // https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options
         runs: 200,
       },
+      viaIR: true,
     },
   },
   defaultNetwork: "localhost",
+
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
@@ -78,38 +77,10 @@ const config: HardhatUserConfig = {
       url: `https://polygon-mumbai.g.alchemy.com/v2/${providerApiKey}`,
       accounts: [deployerPrivateKey],
     },
-    zkSyncTestnet: {
-      url: "https://testnet.era.zksync.dev",
-      zksync: true,
-      accounts: [deployerPrivateKey],
-      verifyURL: "https://zksync2-testnet-explorer.zksync.dev/contract_verification",
-    },
-    zkSync: {
-      url: "https://mainnet.era.zksync.io",
-      zksync: true,
-      accounts: [deployerPrivateKey],
-      verifyURL: "https://zksync2-mainnet-explorer.zksync.io/contract_verification",
-    },
-    gnosis: {
-      url: "https://rpc.gnosischain.com",
-      accounts: [deployerPrivateKey],
-    },
-    chiado: {
-      url: "https://rpc.chiadochain.net",
-      accounts: [deployerPrivateKey],
-    },
-    base: {
-      url: "https://mainnet.base.org",
-      accounts: [deployerPrivateKey],
-    },
-    baseGoerli: {
-      url: "https://goerli.base.org",
-      accounts: [deployerPrivateKey],
-    },
   },
-  verify: {
-    etherscan: {
-      apiKey: `${etherscanApiKey}`,
+  etherscan: {
+    apiKey: {
+      polygon: `${etherscanApiKey}`,
     },
   },
 };
