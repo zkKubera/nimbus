@@ -21,10 +21,9 @@ https://mumbai.polygonscan.com/address/0xcb65059572165773684ef5fe318ba301bf29958
 
 ### Desktop
 
-![Desktop Home Page](screenshots/ss1.png)
+![Desktop Home Page](screenshots/ss1.jpeg)
 ---
 
-![Desktop Edit Page](screenshots/ss2.png)
 
 ### Original Avatar Design Credits
 - React SDK for design SVGs: https://github.com/fangpenlin/avataaars
