@@ -1,11 +1,11 @@
 const contracts = {
-  31337: [
+  80001: [
     {
-      chainId: "31337",
-      name: "localhost",
+      name: "polygonMumbai",
+      chainId: "80001",
       contracts: {
-        Nimbus: {
-          address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        Pixters: {
+          address: "0xcb65059572165773684ef5Fe318bA301bF299583",
           abi: [
             {
               inputs: [

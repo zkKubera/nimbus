@@ -1,3 +1,4 @@
+import { Network } from "@ethersproject/networks";
 import * as chains from "wagmi/chains";
 import scaffoldConfig from "~~/scaffold.config";
 
@@ -59,7 +60,9 @@ export const NETWORKS_EXTRA_DATA: Record<string, TChainAttributes> = {
  * @param txnHash
  * @dev returns empty string if the network is localChain
  */
-export function getBlockExplorerTxLink(chainId: number, txnHash: string) {
+export function getBlockExplorerTxLink(network: Network, txnHash: string) {
+  const { chainId } = network;
+
   const chainNames = Object.keys(chains);
 
   const targetChainArr = chainNames.filter(chainName => {
@@ -90,10 +93,6 @@ export function getBlockExplorerTxLink(chainId: number, txnHash: string) {
  */
 export function getBlockExplorerAddressLink(network: chains.Chain, address: string) {
   const blockExplorerBaseURL = network.blockExplorers?.default?.url;
-  if (network.id === chains.hardhat.id) {
-    return `/blockexplorer/address/${address}`;
-  }
-
   if (!blockExplorerBaseURL) {
     return `https://etherscan.io/address/${address}`;
   }

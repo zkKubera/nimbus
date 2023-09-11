@@ -2,8 +2,7 @@
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}", "./utils/**/*.{js,ts,jsx,tsx}"],
   plugins: [require("daisyui")],
-  darkTheme: "scaffoldEthDark",
-  // DaisyUI theme colors
+
   daisyui: {
     themes: [
       {
@@ -17,7 +16,7 @@ module.exports = {
           neutral: "#212638",
           "neutral-content": "#ffffff",
           "base-100": "#ffffff",
-          "base-200": "#f4f8ff",
+          "base-200": "#F9FBFF",
           "base-300": "#DAE8FF",
           "base-content": "#212638",
           info: "#93BBFB",
@@ -36,7 +35,7 @@ module.exports = {
         scaffoldEthDark: {
           primary: "#212638",
           "primary-content": "#F9FBFF",
-          secondary: "#323f61",
+          secondary: "#2A3655",
           "secondary-content": "#F9FBFF",
           accent: "#4969A6",
           "accent-content": "#F9FBFF",
@@ -60,28 +59,65 @@ module.exports = {
         },
       },
       {
-        exampleUi: {
-          primary: "#000000",
-          "primary-content": "#ffffff",
-          secondary: "#FF6644",
+        customLight: {
+          primary: "#b7f397",
+          "primary-content": "#212638",
+
+          secondary: "#d9e7cb",
           "secondary-content": "#212638",
-          accent: "#93BBFB",
+
+          accent: "#d9e7cb",
           "accent-content": "#212638",
-          neutral: "#f3f3f3",
-          "neutral-content": "#212638",
-          "base-100": "#ffffff",
-          "base-200": "#f1f1f1",
-          "base-300": "#d0d0d0",
+
+          neutral: "#212638",
+          "neutral-content": "#ffffff",
+
+          "base-100": "#f8f8f8",
+          "base-200": "#ffffff",
+          "base-300": "#d9e7cb",
           "base-content": "#212638",
-          info: "#93BBFB",
-          success: "#34EEB6",
-          warning: "#FFCF72",
-          error: "#FF8863",
+
+          info: "#0077c2",
+          success: "#00ab66",
+          warning: "#ffa000",
+          error: "#ff1744",
 
           "--rounded-btn": "9999rem",
 
           ".tooltip": {
             "--tooltip-tail": "6px",
+          },
+        },
+      },
+      {
+        customDark: {
+          primary: "#386a20",
+          "primary-content": "#F9FBFF",
+
+          secondary: "#55624c",
+          "secondary-content": "#F9FBFF",
+
+          accent: "#55624c",
+          "accent-content": "#F9FBFF",
+
+          neutral: "#F9FBFF",
+          "neutral-content": "#121212",
+
+          "base-100": "#1f1f1f",
+          "base-200": "#121212",
+          "base-300": "#55624c",
+          "base-content": "#F9FBFF",
+
+          info: "#00b8d4",
+          success: "#00c853",
+          warning: "#ffa000",
+          error: "#ff1744",
+
+          "--rounded-btn": "9999rem",
+
+          ".tooltip": {
+            "--tooltip-tail": "6px",
+            "--tooltip-color": "hsl(var(--p))",
           },
         },
       },
@@ -92,9 +128,6 @@ module.exports = {
     extend: {
       fontFamily: {
         "bai-jamjuree": ["Bai Jamjuree", "sans-serif"],
-      },
-      boxShadow: {
-        center: "0 0 12px -2px rgb(0 0 0 / 0.05)",
       },
       keyframes: {
         grow: {
