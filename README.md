@@ -10,11 +10,14 @@ It is built using [scaffold-eth 2 🏗️](https://github.com/scaffold-eth/scaff
 
 ## Relevant Links
 
-- Try it: https://pixters.vercel.app/
+- Try it: https://nimbus-nextjs-git-v2-distroinfinity.vercel.app/
 - Deployed smart contract: 
-https://testnet.mantlescan.org/address/0x930a39a1370eebdf617a176d289012c2f52e7e2a
+mantle - https://testnet.mantlescan.org/address/0x930a39a1370eebdf617a176d289012c2f52e7e2a
 
-https://mumbai.polygonscan.com/address/0xcb65059572165773684ef5fe318ba301bf299583
+polygon - https://mumbai.polygonscan.com/address/0xcb65059572165773684ef5fe318ba301bf299583
+
+taiko - https://explorer.test.taiko.xyz/address/0x3535E28E7f012004408aB250Fd06C4220268531B
+
 
 
 ## Images
